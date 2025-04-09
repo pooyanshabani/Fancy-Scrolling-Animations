@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+  height: 1100px;
+}
+
+.main-nav {
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+.nav {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  list-style: none;
+  color: #3f3f3f;
+}
+
+.nav img {
+  width: 17px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.header-left {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.sticky {
+  position: sticky;
+  top:0;
+  background: #ffffff;
+  max-width: 900px;
+  margin: 10px auto;
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.container p {
+  font-size: 15px;
+  color: #3f3f3f;
+}
+.container a {
+  background: #0071e3;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 130px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: start-logo;
+  animation-duration: 1s;
+}
+
+.logo-around {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  width: 300px;
+  animation: scale-fade linear;
+  animation-timeline: scroll();
+}
+
+.logo-main {
+  width: 70px;
+  position: absolute;
+  animation: logo-pos linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scale-fade {
+  from {
+    width: 300px;
+    opacity: 1;
+    margin-bottom: 40px;
+    rotate: 0;
+  }
+  to {
+    width: 500px;
+    opacity: 0.2;
+    margin-bottom: -50px;
+    margin-top: 250px;
+    rotate: 25deg;
+  }
+}
+
+@keyframes logo-pos {
+  from {
+    top: 50%;
+    translate: 0 -50%;
+  }
+  to {
+    top: 70%;
+  }
+}
+
+@keyframes start-logo {
+  from {
+    width: 100px;
+    opacity: 0;
+    rotate: -30deg;
+  }
+  to {
+    width: 500px;
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
